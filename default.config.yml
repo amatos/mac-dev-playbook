@@ -111,6 +111,7 @@ homebrew_cask_apps:
   - google-drive-file-stream
   - google-earth-pro
   - gpg-suite
+  - iterm2
   - kaleidoscope
   - mysides
   - qlcolorcode
