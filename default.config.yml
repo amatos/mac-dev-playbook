@@ -67,17 +67,17 @@ homebrew_installed_packages:
   - grep
   - httpie
   - hub
+  - imagemagick
   - mas
   - nmap
   - ssh-copy-id
+  - vim
+  - wget
   - zsh
   - zsh-autosuggestions
   - zsh-completions
   - zsh-syntax-highlighting
-  - { name: imagemagick, install_options: "with-webp" }
-  - { name: vim, install_options: "with-luajit,override-system-vi" }
-  - { name: wget, install_options: "with-iri" }
-
+  
 homebrew_taps:
   - bramstein/webfonttools
   - homebrew/cask
