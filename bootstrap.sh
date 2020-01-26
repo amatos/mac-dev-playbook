@@ -17,5 +17,5 @@ git clone https://github.com/amatos/macos-playbook
 
 cd macos-playbook
 
-ansible-galaxy install -r requirements.yml
-ansible-playbook main.yml -i inventory -K
+echo ansible-galaxy install -r requirements.yml
+echo ansible-playbook main.yml -i inventory -K
