@@ -62,17 +62,16 @@ homebrew_installed_packages:
   # - wget
   # - wrk
   # - { name: gnu-sed, install_options: "with-default-names" }
-  - antigen
   - bash
   - bash-completion2
-  - cowsay
+  # - cowsay
   - duti
   - git
   - gpg
   - grep
   - httpie
   - hub
-  - imagemagick
+  # - imagemagick
   - mas
   - nmap
   - ssh-copy-id
@@ -92,8 +91,6 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   # - chromedriver
-  # - docker
-  # - dropbox
   # - firefox
   # - handbrake
   # - licecap
@@ -101,7 +98,6 @@ homebrew_cask_apps:
   # - sequel-pro
   # - skitch
   # - slack
-  # - sublime-text
   # - transmit
   # - vagrant
   - adguard
