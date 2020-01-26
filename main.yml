@@ -1,10 +1,5 @@
 ---
 - hosts: all
-  vars_prompt:
-    - name: masusername
-      prompt: "What is you Mac App Store username?"
-    - name: maspassword
-      prompt: "What is your Mac App Store password?1"
   connection: local
 
   vars_files:

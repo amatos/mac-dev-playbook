@@ -98,8 +98,8 @@ homebrew_cask_apps:
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
-mas_email: "{{ masusername }}"
-mas_password: "{{ maspassword }}"
+mas_email:
+mas_password:
 
 osx_script: "~/.macos --no-restart"
 
