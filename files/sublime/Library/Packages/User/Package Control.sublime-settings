@@ -2,22 +2,8 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"DashDoc",
-		"DocBlockr",
-		"Dockerfile Syntax Highlighting",
-		"Drupal Snippets",
-		"FileDiffs",
-		"GitHub Flavored Markdown Preview",
-		"Jinja2",
-		"MarkAndMove",
-		"Markdown Preview",
+		"ansible",
 		"Package Control",
-		"Puppet",
-		"RegReplace",
-		"Sass",
-		"SublimeCodeIntel",
-		"SublimeLinter",
-		"TrailingSpaces",
-		"Xdebug Client"
+		"Theme - Cobalt2"
 	]
 }

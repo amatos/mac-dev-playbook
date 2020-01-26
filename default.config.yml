@@ -6,71 +6,100 @@ configure_sudoers: yes
 configure_terminal: yes
 configure_osx: yes
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/amatos/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/.dotfiles
 dotfiles_files:
-  - .zshrc
+  - .aliases
+  - .bash_profile
+  - .bash_prompt
+  - .bashrc
+  - .curlrc
+  - .editorconfig
+  - .exports
+  - .functions
+  - .gdbinit
+  - .gitattributes
+  - .gitconfig
   - .gitignore
+  - .gvimrc
+  - .hgignore
+  - .hushlogin
   - .inputrc
+  - .macos
   - .osx
+  - .screenrc
+  - .tmux.conf
   - .vimrc
+  - .wgetrc
 
 homebrew_installed_packages:
+  # - coreutils
+  # - moreutils
+  # - findutils
+  # - { name: gnu-sed, install_options: "with-default-names" }
+  # - bash
+  # - bash-completion2
+  # - { name: wget, install_options: "with-iri" }
+  # - { name: vim, install_options: "with-luajit,override-system-vi" }
+  # - grep
+  # - { name: imagemagick, install_options: "with-webp" }
+
   # - ansible # Installed via Pip.
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - go
-  - gpg
-  - hub
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
-  - wrk
+  # - autoconf
+  # - bash-completion
+  # - doxygen
+  # - gettext
+  # - gifsicle
+  # - git
+  # - go
+  # - gpg
+  # - hub
+  # - httpie
+  # - iperf
+  # - libevent
+  # - sqlite
+  # - mcrypt
+  # - nmap
+  # - node
+  # - nvm
+  # - php
+  # - ssh-copy-id
+  # - cowsay
+  # - readline
+  # - openssl
+  # - pv
+  # - wget
+  # - wrk
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - bramstein/webfonttools
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
-  - docker
-  - dropbox
-  - firefox
-  - google-chrome
-  - handbrake
-  - licecap
-  - macvim
-  - sequel-pro
-  - skitch
-  - slack
-  - sublime-text
-  - transmit
-  - vagrant
+  # - chromedriver
+  # - docker
+  # - dropbox
+  # - firefox
+  # - google-chrome
+  # - handbrake
+  # - licecap
+  # - macvim
+  # - sequel-pro
+  # - skitch
+  # - slack
+  # - sublime-text
+  # - transmit
+  # - vagrant
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
-mas_email: ""
-mas_password: ""
+mas_email: {{ masusername }}
+mas_password: {{ maspassword }}
 
-osx_script: "~/.osx --no-restart"
+osx_script: "~/.macos --no-restart"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are

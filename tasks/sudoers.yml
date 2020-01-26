@@ -15,7 +15,6 @@
 - name: Copy sudoers configuration into place.
   template:
     src: templates/sudoers.j2
-    dest: /etc/sudoers
+    dest: /private/etc/sudoers.d/vagrant
     mode: 0440
-    validate: 'visudo -cf %s'
   become: yes
