@@ -2,6 +2,8 @@
 dotvim: ~/.vim
 downloads: ~/.ansible-downloads/
 
+osx_script: "~/.macos --no-restart"
+
 configure_dotfiles: yes
 configure_osx: yes
 configure_sudoers: yes
@@ -34,6 +36,7 @@ dotfiles_files:
   - .tmux.conf
   - .vimrc
   - .wgetrc
+  - .zshrc
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
@@ -59,6 +62,7 @@ homebrew_installed_packages:
   # - wget
   # - wrk
   # - { name: gnu-sed, install_options: "with-default-names" }
+  - antigen
   - bash
   - bash-completion2
   - cowsay
@@ -156,8 +160,6 @@ mas_installed_apps:
   - { id: 1289378661, name: "Twitterrific" }
   - { id: 1204104924, name: "Videux Play LT" }
   - { id: 497799835, name: "Xcode" }
-
-osx_script: "~/.macos --no-restart"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
