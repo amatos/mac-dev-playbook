@@ -66,6 +66,7 @@ homebrew_installed_packages:
   - bash
   - bash-completion2
   - cowsay
+  - duti
   - git
   - gpg
   - grep
