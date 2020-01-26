@@ -1,0 +1,42 @@
+---
+- name: Ensure ~/.vim exists.
+  file:
+    path: "{{ dotvim }}"
+    state: directory
+
+- name: Ensure ~/.vim/autoload exists.
+  file:
+    path: "{{ dotvim }}/autoload"
+    state: directory
+
+- name: Ensure ~/.vim/bundle exists.
+  file:
+    path: "{{ dotvim }}/bundle"
+    state: directory
+
+- name: Ensure ~/.vim/backups exists.
+  file:
+    path: "{{ dotvim }}/backups"
+    state: directory
+
+- name: Ensure ~/.vim/swaps exists.
+  file:
+    path: "{{ dotvim }}/swaps"
+    state: directory
+
+- name: Ensure ~/.vim/undo exists.
+  file:
+    path: "{{ dotvim }}/undo"
+    state: directory
+
+
+- name: Download pathogen
+  get_url:
+    url: https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+    dest: "{{ dotvim }}/autoload/pathogen.vim"
+    mode: '0660'
+
+- name: Download nerdtree
+  git:
+    repo: https://github.com/scrooloose/nerdtree.git
+    dest: "{{ dotvim }}/bundle/nerdtree"

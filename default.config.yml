@@ -1,10 +1,12 @@
 ---
 downloads: ~/.ansible-downloads/
+dotvim: ~/.vim
 
 configure_dotfiles: yes
 configure_sudoers: yes
 configure_terminal: yes
 configure_osx: yes
+configure_vim: yes
 
 dotfiles_repo: https://github.com/amatos/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
