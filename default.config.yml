@@ -153,7 +153,6 @@ mas_installed_apps:
   - { id: 1006739057, name: "NepTunes for LastFm" }
   - { id: 409203825, name: "Numbers" }
   - { id: 409201541, name: "Pages" }
-  - { id: 967805235, name: "Paste" }
   - { id: 445189367, name: "PopClip" }
   - { id: 897118787, name: "Shazam" }
   - { id: 1176895641, name: "Spark" }
