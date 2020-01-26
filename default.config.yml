@@ -38,8 +38,8 @@ homebrew_installed_packages:
   # - moreutils
   # - findutils
   # - { name: gnu-sed, install_options: "with-default-names" }
-  # - bash
-  # - bash-completion2
+  - bash
+  - bash-completion2
   # - { name: wget, install_options: "with-iri" }
   # - { name: vim, install_options: "with-luajit,override-system-vi" }
   # - grep
@@ -83,7 +83,7 @@ homebrew_cask_apps:
   # - docker
   # - dropbox
   # - firefox
-  # - google-chrome
+  - google-chrome
   # - handbrake
   # - licecap
   # - macvim
