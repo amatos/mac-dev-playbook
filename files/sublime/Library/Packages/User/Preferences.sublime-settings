@@ -28,6 +28,6 @@
 	"match_brackets": true,
 	"match_brackets_angle": true,
 	"rulers": [	80 ],
-	"wide_caret": true,
+	"wide_caret": false,
 	"word_wrap": true,
 }
