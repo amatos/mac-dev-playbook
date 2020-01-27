@@ -1,0 +1,10 @@
+---
+- name: Download Cobalt2-iterm.itermcolors
+  git:
+    repo: https://github.com/wesbos/Cobalt2-iterm.git
+    dest: "{{ downloads }}/cobalt2/"
+  register: got_Cobalt2_iterm
+
+- name: Open Cobalt2-iterm.itermcolors
+  command: open "{{ downloads }}/cobalt2/cobalt2.itermcolors"
+  when: got_Cobalt2_iterm

@@ -1,23 +1,26 @@
 ---
 dotvim: ~/.vim
-downloads: ~/.ansible-downloads/
+downloads: ~/.ansible-downloads
+ohmyzsh_install_dir: ~/.oh-my-zsh
 
 osx_script: "~/.macos --no-restart"
 
 configure_dotfiles: yes
+configure_iterm: yes
 configure_osx: yes
 configure_sudoers: yes
 configure_terminal: yes
 configure_vim: yes
+configure_ohmyzsh: yes
 
 dotfiles_repo: https://github.com/amatos/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: ~/.dotfiles
 dotfiles_files:
   - .aliases
-  - .bash_profile
-  - .bash_prompt
-  - .bashrc
+  # - .bash_profile
+  # - .bash_prompt
+  # - .bashrc
   - .curlrc
   - .editorconfig
   - .exports
@@ -26,12 +29,12 @@ dotfiles_files:
   - .gitattributes
   - .gitconfig
   - .gitignore
-  - .gvimrc
-  - .hgignore
+  # - .gvimrc
+  # - .hgignore
   - .hushlogin
   - .inputrc
   - .macos
-  - .osx
+  # - .osx
   - .screenrc
   - .tmux.conf
   - .vimrc
@@ -39,7 +42,6 @@ dotfiles_files:
   - .zshrc
 
 homebrew_installed_packages:
-  # - ansible # Installed via Pip.
   # - autoconf
   # - bash-completion
   # - coreutils
@@ -59,28 +61,28 @@ homebrew_installed_packages:
   # - pv
   # - readline
   # - sqlite
-  # - wget
   # - wrk
-  # - { name: gnu-sed, install_options: "with-default-names" }
-  - bash
-  - bash-completion2
+  # - gnu-sed
+  # - bash
+  # - bash-completion2
   # - cowsay
   - duti
-  - git
-  - gpg
-  - grep
+  # - git
+  # - gpg
+  # - grep
   - httpie
   - hub
   # - imagemagick
   - mas
   - nmap
-  - ssh-copy-id
-  - vim
+  # - ssh-copy-id
+  # - vim
   - wget
-  - zsh
+  # - zsh
   - zsh-autosuggestions
   - zsh-completions
   - zsh-syntax-highlighting
+  - dockutil
   
 homebrew_taps:
   - bramstein/webfonttools
@@ -114,14 +116,14 @@ homebrew_cask_apps:
   - gpg-suite
   - iterm2
   - kaleidoscope
-  - mysides
-  - qlcolorcode
-  - qlimagesize
-  - qlmarkdown
-  - qlstephen
-  - qlvideo
-  - quicklook-json
-  - quicklookase
+  # - mysides
+  # - qlcolorcode
+  # - qlimagesize
+  # - qlmarkdown
+  # - qlstephen
+  # - qlvideo
+  # - quicklook-json
+  # - quicklookase
   - scroll-reverser
   - setapp
   - skype
