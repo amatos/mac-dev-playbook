@@ -62,31 +62,31 @@ homebrew_installed_packages:
   # - nvm
   # - openssl
   # - php
-  # - pv
-  # - readline
-  # - sqlite
-  # - wrk
-  # - gnu-sed
   # - bash
   # - bash-completion2
   # - cowsay
-  - duti
   # - git
+  # - gnu-sed
   # - gpg
   # - grep
-  - httpie
-  - hub
   # - imagemagick
-  - mas
-  - nmap
+  # - pv
+  # - readline
+  # - sqlite
   # - ssh-copy-id
   # - vim
-  - wget
+  # - wrk
   # - zsh
-  - zsh-autosuggestions
-  - zsh-completions
-  - zsh-syntax-highlighting
+  # - zsh-autosuggestions
+  # - zsh-completions
+  # - zsh-syntax-highlighting
   - dockutil
+  - duti
+  - httpie
+  - hub
+  - mas
+  - nmap
+  - wget
   
 homebrew_taps:
   - bramstein/webfonttools
@@ -101,9 +101,18 @@ homebrew_cask_apps:
   # - handbrake
   # - licecap
   # - macvim
+  # - mysides
+  # - qlcolorcode
+  # - qlimagesize
+  # - qlmarkdown
+  # - qlstephen
+  # - qlvideo
+  # - quicklook-json
+  # - quicklookase
   # - sequel-pro
   # - skitch
   # - slack
+  # - suspicious-package
   # - transmit
   # - vagrant
   - adguard
@@ -120,21 +129,12 @@ homebrew_cask_apps:
   - gpg-suite
   - iterm2
   - kaleidoscope
-  # - mysides
-  # - qlcolorcode
-  # - qlimagesize
-  # - qlmarkdown
-  # - qlstephen
-  # - qlvideo
-  # - quicklook-json
-  # - quicklookase
   - scroll-reverser
   - setapp
   - skype
   - sublime-merge
   - sublime-text
   - superduper
-  - suspicious-package
   - transmission
 
 # See `geerlingguy.mas` role documentation for usage instructions.
