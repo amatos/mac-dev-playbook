@@ -2,6 +2,9 @@
 dotvim: ~/.vim
 downloads: ~/.ansible-downloads
 ohmyzsh_install_dir: ~/.oh-my-zsh
+sublime_userdir: ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+sublime_packagedir: ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+
 
 osx_script: "~/.macos --no-restart"
 
