@@ -13,7 +13,6 @@
       dest: "{{ ohmyzsh_install_dir }}/custom/plugins/zsh-autosuggestions"
       version: master
       update: yes
-    become: yes
     tags: ohmyzsh
 
   - name: 'Clone zsh-history-substring-search plugin'
@@ -22,7 +21,6 @@
       dest: "{{ ohmyzsh_install_dir }}/custom/plugins/zsh-history-substring-search"
       version: master
       update: yes
-    become: yes
     tags: ohmyzsh
 
   - name: 'Clone zsh-syntax-highlighting plugin'
@@ -31,7 +29,6 @@
       dest: "{{ ohmyzsh_install_dir }}/custom/plugins/zsh-syntax-highlighting"
       version: master
       update: yes
-    become: yes
     tags: ohmyzsh
 
   - name: Download Cobalt2 theme
