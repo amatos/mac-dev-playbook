@@ -11,23 +11,23 @@
     state: directory
   register: sublime_packagedir_exists
 
-- name: Copy sublime preferences
-  template:
-    src: files/sublime/Library/Packages/User/Preferences.sublime-settings
-    dest: "{{ sublime_userdir }}"
-    mode: 0660
-  when: sublime_userdir_exists
-
-- name: Copy sublime package control preferences
-  template:
-    src: files/sublime/Library/Packages/User/Package\ Control.sublime-settings
-    dest: "{{ sublime_userdir }}"
-    mode: 0660
-  when: sublime_userdir_exists
-
 - name: Download Package Control
   get_url:
     url: https://packagecontrol.io/Package%20Control.sublime-package
-    dest: "{{ sublime_packagedir }}/Package%20Control.sublime-package"
-    mode: '0660'
+    dest: "{{ sublime_packagedir }}/Package Control.sublime-package"
+  register: sublime_packagecontrol_installed
   when: sublime_packagedir_exists
+
+- name: Copy sublime preferences
+  copy:
+    src: files/sublime/Library/Packages/User/Preferences.sublime-settings
+    dest: "{{ sublime_userdir }}/Preferences.sublime-settings"
+  when:
+    - sublime_userdir_exists
+    - sublime_packagecontrol_installed
+
+- name: Copy sublime package control preferences
+  copy:
+    src: "files/sublime/Library/Packages/User/Package Control.sublime-settings"
+    dest: "{{ sublime_userdir }}/Package Control.sublime-settings"
+  when: sublime_userdir_exists
