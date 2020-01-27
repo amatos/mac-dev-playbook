@@ -1,14 +1,27 @@
 #!/usr/bin/env bash
 
+echo "---"
+echo "Installing xcode command line tools."
 xcode-select --install
+echo "Please allow the install to complete before continuing."
+read -p "Press [Return] or [Enter] key to continue..."
 
+echo "---"
+echo "Creating temp directory"
 mkdir ~/temp
 cd ~/temp
 
+echo "---"
+echo "Downloading pip bootstrap."
+curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 
+echo "---"
+echo "installing pip"
 python get-pip.py --user
 CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments ~/Library/Python/2.7/bin/pip install --user ansible
 
+echo "---"
+echo "Removing pip bootstrap script."
 rm get-pip.py
 
 echo "---"
