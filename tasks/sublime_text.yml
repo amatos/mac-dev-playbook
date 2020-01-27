@@ -1,0 +1,37 @@
+---
+sublime_userdir: ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+sublime_packagedir: ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+
+
+- name: Ensure sublime_userdir exists.
+  file:
+    path: "{{ sublime_userdir }}"
+    state: directory
+  register: sublime_userdir_exists
+
+- name: Ensure sublime_packagedir exists.
+  file:
+    path: "{{ sublime_packagedir }}"
+    state: directory
+  register: sublime_packagedir_exists
+
+- name: Copy sublime preferences
+  template:
+    src: files/sublime/Library/Packages/User/Preferences.sublime-settings
+    dest: "{{ sublime_userdir }}"
+    mode: 0660
+  when: sublime_userdir_exists
+
+- name: Copy sublime package control preferences
+  template:
+    src: files/sublime/Library/Packages/User/Package\ Control.sublime-settings
+    dest: "{{ sublime_userdir }}"
+    mode: 0660
+  when: sublime_userdir_exists
+
+- name: Download Package Control
+  get_url:
+    url: https://packagecontrol.io/Package%20Control.sublime-package
+    dest: "{{ sublime_packagedir }}/Package%20Control.sublime-package"
+    mode: '0660'
+  when: sublime_packagedir_exists

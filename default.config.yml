@@ -12,6 +12,7 @@ configure_sudoers: yes
 configure_terminal: yes
 configure_vim: yes
 configure_ohmyzsh: yes
+configure_sublimetext: yes
 
 dotfiles_repo: https://github.com/amatos/dotfiles.git
 dotfiles_repo_accept_hostkey: yes

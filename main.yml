@@ -47,6 +47,9 @@
       when: configure_vim
       tags: ['vim']
 
+    - include_tasks: tasks/sublime_text.yml
+      when: configure_sublimetext
+
     - name: Run configured post-provision ansible task files.
       include_tasks: "{{ outer_item }}"
       loop_control:
