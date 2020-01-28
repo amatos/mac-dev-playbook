@@ -2,7 +2,7 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"ansible",
+		"Ansible",
 		"Package Control",
 		"Theme - Cobalt2"
 	]
