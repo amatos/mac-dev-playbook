@@ -16,24 +16,24 @@
     url: https://packagecontrol.io/Package%20Control.sublime-package
     dest: "{{ sublime_packagedir }}/Package Control.sublime-package"
   register: sublime_packagecontrol_installed
-  when: sublime_packagedir_exists|bool
+  when: sublime_packagedir_exists
 
 - name: Copy sublime preferences
   copy:
     src: files/sublime/Library/Packages/User/Preferences.sublime-settings
     dest: "{{ sublime_userdir }}/Preferences.sublime-settings"
-  when: sublime_userdir_exists|bool
+  when: sublime_userdir_exists
 
 - name: Copy sublime package control preferences
   copy:
     src: "files/sublime/Library/Packages/User/Package Control.sublime-settings"
     dest: "{{ sublime_userdir }}/Package Control.sublime-settings"
   when:
-    - sublime_userdir_exists|bool
-    - sublime_packagecontrol_installed|bool
+    - sublime_userdir_exists
+    - sublime_packagecontrol_installed
 
 - name: Copy Cobalt2 theme
   copy:
     src: "files/sublime/Library/Installed Packages/Theme - Cobalt2.sublime-package"
     dest: "{{ sublime_packagedir }}/Theme - Cobalt2.sublime-package"
-  when: sublime_packagecontrol_installed|bool
+  when: sublime_packagecontrol_installed

@@ -1,38 +1,38 @@
 ---
-  - name: 'Clone oh-my-zsh repo'
-    git:
-      repo: https://github.com/ohmyzsh/ohmyzsh.git
-      dest: "{{ ohmyzsh_install_dir }}"
-      version: master
-      update: yes
-    tags: ohmyzsh
+- name: 'Clone oh-my-zsh repo'
+  git:
+    repo: https://github.com/ohmyzsh/ohmyzsh.git
+    dest: "{{ ohmyzsh_install_dir }}"
+    version: master
+    update: yes
+  tags: ohmyzsh
 
-  - name: 'Clone zsh-autosuggestions plugin'
-    git:
-      repo: https://github.com/zsh-users/zsh-autosuggestions
-      dest: "{{ ohmyzsh_install_dir }}/custom/plugins/zsh-autosuggestions"
-      version: master
-      update: yes
-    tags: ohmyzsh
+- name: 'Clone zsh-autosuggestions plugin'
+  git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions
+    dest: "{{ ohmyzsh_install_dir }}/custom/plugins/zsh-autosuggestions"
+    version: master
+    update: yes
+  tags: ohmyzsh
 
-  - name: 'Clone zsh-history-substring-search plugin'
-    git:
-      repo: https://github.com/zsh-users/zsh-history-substring-search
-      dest: "{{ ohmyzsh_install_dir }}/custom/plugins/zsh-history-substring-search"
-      version: master
-      update: yes
-    tags: ohmyzsh
+- name: 'Clone zsh-history-substring-search plugin'
+  git:
+    repo: https://github.com/zsh-users/zsh-history-substring-search
+    dest: "{{ ohmyzsh_install_dir }}/custom/plugins/zsh-history-substring-search"
+    version: master
+    update: yes
+  tags: ohmyzsh
 
-  - name: 'Clone zsh-syntax-highlighting plugin'
-    git:
-      repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-      dest: "{{ ohmyzsh_install_dir }}/custom/plugins/zsh-syntax-highlighting"
-      version: master
-      update: yes
-    tags: ohmyzsh
+- name: 'Clone zsh-syntax-highlighting plugin'
+  git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: "{{ ohmyzsh_install_dir }}/custom/plugins/zsh-syntax-highlighting"
+    version: master
+    update: yes
+  tags: ohmyzsh
 
-  - name: Download Cobalt2 theme
-    get_url:
-      url: https://raw.githubusercontent.com/wesbos/Cobalt2-iterm/master/cobalt2.zsh-theme
-      dest: "{{ ohmyzsh_install_dir }}/themes/cobalt2.zsh-theme"
-      mode: '0660'
+- name: Download Cobalt2 theme
+  get_url:
+    url: https://raw.githubusercontent.com/wesbos/Cobalt2-iterm/master/cobalt2.zsh-theme
+    dest: "{{ ohmyzsh_install_dir }}/themes/cobalt2.zsh-theme"
+    mode: '0660'
