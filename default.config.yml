@@ -86,13 +86,16 @@ homebrew_installed_packages:
   - hub
   - mas
   - nmap
+  - node
   - wget
-  
+  - yarn
+
 homebrew_taps:
   - bramstein/webfonttools
   - homebrew/cask
   - homebrew/cask-versions
   - homebrew/core
+  - homebrew/cask-fonts
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
