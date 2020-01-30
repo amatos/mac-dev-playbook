@@ -1,11 +1,10 @@
 ---
-dotvim: ~/.vim
-downloads: ~/.ansible-downloads
-ohmyzsh_install_dir: ~/.oh-my-zsh
+dotvim: "~/.vim"
+downloads: "~/.ansible-downloads"
+ohmyzsh_install_dir: "~/.oh-my-zsh"
 sublime_userdir: "~/Library/Application Support/Sublime Text 3/Packages/User"
 sublime_packagedir: "~/Library/Application Support/Sublime Text 3/Installed Packages"
-dockutil_install_path: /usr/local/bin/dockutil
-workarounds_dir: ~/workarounds
+dockutil_install_path: "/usr/local/bin/dockutil"
 macos_version: 10.15.2
 
 
@@ -23,7 +22,7 @@ configure_dock: yes
 
 dotfiles_repo: https://github.com/amatos/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/.dotfiles
+dotfiles_repo_local_destination: "~/.dotfiles"
 dotfiles_files:
   - .aliases
   # - .bash_profile
@@ -148,59 +147,60 @@ homebrew_cask_apps:
 mas_email: ""
 mas_password: ""
 mas_installed_apps:
-  - { id: 1333542190, name: "1Password" }
-  - { id: 824171161, name: "Affinity Designer" }
-  - { id: 824183456, name: "Affinity Photo" }
-  - { id: 1091189122, name: "Bear" }
-  - { id: 483014855, name: "Browser Fairy" }
-  - { id: 1290358394, name: "Cardhop" }
-  - { id: 523620159, name: "CleanMyDrive 2" }
-  - { id: 1055511498, name: "Day One" }
-  - { id: 975937182, name: "Fantastical 2" }
-  - { id: 1493996622, name: "Front and Center" }
-  - { id: 409183694, name: "Keynote" }
-  - { id: 1006739057, name: "NepTunes for LastFm" }
-  - { id: 409203825, name: "Numbers" }
-  - { id: 409201541, name: "Pages" }
-  - { id: 445189367, name: "PopClip" }
-  - { id: 897118787, name: "Shazam" }
-  - { id: 1176895641, name: "Spark" }
-  - { id: 873245660, name: "Spillo" }
-  - { id: 1289378661, name: "Twitterrific" }
-  - { id: 1204104924, name: "Videux Play LT" }
-  - { id: 497799835, name: "Xcode" }
+  - { name: "1Password", id: 1333542190 }
+  - { name: "Affinity Designer", id: 824171161 }
+  - { name: "Affinity Photo", id: 824183456 }
+  - { name: "Bear", id: 1091189122 }
+  - { name: "Browser Fairy", id: 483014855 }
+  - { name: "Cardhop", id: 1290358394 }
+  - { name: "CleanMyDrive 2", id: 523620159 }
+  - { name: "Day One", id: 1055511498 }
+  - { name: "Fantastical 2", id: 975937182 }
+  - { name: "Front and Center", id: 1493996622 }
+  - { name: "Keynote", id: 409183694 }
+  - { name: "NepTunes for LastFm", id: 1006739057 }
+  - { name: "Numbers", id: 409203825 }
+  - { name: "OneDrive", id: 823766827 }
+  - { name: "Pages", id: 409201541 }
+  - { name: "PopClip", id: 445189367 }
+  - { name: "Shazam", id: 897118787 }
+  - { name: "Spark", id: 1176895641 }
+  - { name: "Spillo", id: 873245660 }
+  - { name: "Twitterrific", id: 1289378661 }
+  - { name: "Videux Play LT", id: 1204104924 }
+  - { name: "Xcode", id: 497799835 }
 
 dockitems_remove_all: true
 
 dockitems_enabled:
-  - name: Launchpad
+  - name: "Launchpad"
     path: "/System/Applications/Launchpad.app"
     pos: 1
-  - name: Safari
+  - name: "Safari"
     path: "/Applications/Safari.app"
     pos: 2
-  - name: Spark
+  - name: "Spark"
     path: "/Applications/Spark.app"
     pos: 3
-  - name: FaceTime
+  - name: "FaceTime"
     path: "/System/Applications/FaceTime.app"
     pos: 4
-  - name: Messages
+  - name: "Messages"
     path: "/System/Applications/Messages.app"
     pos: 5
-  - name: Photos
+  - name: "Photos"
     path: "/System/Applications/Photos.app"
     pos: 6
-  - name: "Fantastical 2"
-    path: "/Applications/Fantastical 2.app"
+  - name: "Fantastical"
+    path: "/Applications/Fantastical.app"
     pos: 7
-  - name: Bear
+  - name: "Bear"
     path: "/Applications/Bear.app"
     pos: 8
-  - name: Music
+  - name: "Music"
     path: "/System/Applications/Music.app"
     pos: 9
-  - name: News
+  - name: "News"
     path: "/System/Applications/News.app"
     pos: 10
   - name: "App Store"
@@ -215,10 +215,12 @@ dockitems_enabled:
   - name: "Sublime Merge"
     path: "/Applications/Sublime Merge.app"
     pos: 14
-  - name: iTerm
+  - name: "iTerm"
     path: "/Applications/iTerm.app"
     pos: 15
-
+  - name: "Downloads"
+    path: "~/Downloads"
+    pos: 16
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are

@@ -1,17 +1,16 @@
 ---
-- name: Ensure ~/workarounds exists.
-  file:
-    path: {{ workarounds_dir }}
-    state: directory
-  register: workarounds_dir_exists
-
-- name: copt apropos script, removing /usr/lib from apropos path
-  command: "sed -e 66s@/usr/lib@@ /usr/bin/apropos > {{ workarounds_dir }}/apropos.{{ macos_version }}"
-  when: workarounds_dir_exists
-  register: apropos_workaround
-
-- name: Change file ownership, group and permissions
-  file:
-    path: "{{ workarounds_dir }}/apropos.{{ macos_version }}"
+- name: Copy apropos script to /usr/local/bin
+  copy:
+    src: /usr/bin/apropos
+    dest: "/usr/local/bin/apropos.{{ macos_version }}"
+    owner: "{{ lookup('env','USER') }}"
+    group: 'staff'
     mode: '0755'
-  when: apropos_workaround
+  register: copied_apropos
+
+- name: Remove /usr/lib from apropos work-around script
+  replace:
+    path: "/usr/local/bin/apropos.{{ macos_version }}"
+    regexp: '(for d in)( )(/var/cache/man)( )(\$manpath)(.*)'
+    replace: '\1\2\3\4\5'
+  when: copied_apropos
