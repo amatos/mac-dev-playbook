@@ -135,12 +135,14 @@ homebrew_cask_apps:
   - gpg-suite
   - iterm2
   - kaleidoscope
+  - scrivener
   - scroll-reverser
   - setapp
   - skype
   - sublime-merge
   - sublime-text
   - superduper
+  - swiftdefaultappsprefpane
   - transmission
 
 # See `geerlingguy.mas` role documentation for usage instructions.
