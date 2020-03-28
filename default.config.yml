@@ -24,10 +24,12 @@ dotfiles_repo: https://github.com/amatos/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
 dotfiles_repo_local_destination: "~/.dotfiles"
 dotfiles_files:
+  # - .hgignore
+  # - .osx
   - .aliases
-  # - .bash_profile
-  # - .bash_prompt
-  # - .bashrc
+  - .bash_profile
+  - .bash_prompt
+  - .bashrc
   - .curlrc
   - .editorconfig
   - .exports
@@ -36,12 +38,10 @@ dotfiles_files:
   - .gitattributes
   - .gitconfig
   - .gitignore
-  # - .gvimrc
-  # - .hgignore
+  - .gvimrc
   - .hushlogin
   - .inputrc
   - .macos
-  # - .osx
   - .screenrc
   - .tmux.conf
   - .vimrc
@@ -50,34 +50,31 @@ dotfiles_files:
 
 homebrew_installed_packages:
   # - autoconf
+  # - bash
   # - bash-completion
+  # - bash-completion2
   # - coreutils
+  # - cowsay
   # - doxygen
   # - findutils
   # - gettext
   # - gifsicle
+  # - git
+  # - gnu-sed
   # - go
+  # - gpg
+  # - grep
   # - iperf
   # - libevent
   # - mcrypt
   # - moreutils
-  # - node
   # - nvm
   # - openssl
   # - php
-  # - bash
-  # - bash-completion2
-  # - cowsay
-  # - git
-  # - gnu-sed
-  # - gpg
-  # - grep
-  # - imagemagick
   # - pv
   # - readline
   # - sqlite
   # - ssh-copy-id
-  # - vim
   # - wrk
   # - zsh
   # - zsh-autosuggestions
@@ -87,9 +84,11 @@ homebrew_installed_packages:
   - duti
   - httpie
   - hub
+  - imagemagick
   - mas
   - nmap
   - node
+  - vim
   - wget
   - yarn
 
@@ -103,8 +102,6 @@ homebrew_taps:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   # - chromedriver
-  # - firefox
-  # - handbrake
   # - licecap
   # - macvim
   # - mysides
@@ -119,7 +116,6 @@ homebrew_cask_apps:
   # - skitch
   # - slack
   # - suspicious-package
-  # - transmit
   # - vagrant
   - adguard
   - adobe-creative-cloud
@@ -129,22 +125,25 @@ homebrew_cask_apps:
   - docker
   - dropbox
   - droplr
+  - firefox
   - google-chrome
   - google-drive-file-stream
   - google-earth-pro
   - gpg-suite
+  - handbrake
   - imazing
   - iterm2
   - kaleidoscope
   - scrivener
-  - scroll-reverser
   - setapp
+  - shortcutdetective
   - skype
   - sublime-merge
   - sublime-text
   - superduper
   - swiftdefaultappsprefpane
   - transmission
+  - transmit
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_email: ""
