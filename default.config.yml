@@ -49,7 +49,6 @@ dotfiles_files:
   - .zshrc
 
 homebrew_installed_packages:
-
   - httpie
   - hub
   - imagemagick
