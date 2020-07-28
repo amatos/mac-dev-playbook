@@ -61,17 +61,38 @@ homebrew_installed_packages:
 
 homebrew_taps:
   - bramstein/webfonttools
+  - buo/cask-upgrade
   - homebrew/cask
+  - homebrew/cask-fonts
   - homebrew/cask-versions
   - homebrew/core
-  - homebrew/cask-fonts
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - adguard
+  - adobe-creative-cloud
+  - aerial
+  - alfred
+  - calibre
+  - carbon-copy-cloner
   # - chromedriver
+  - docker
+  - dropbox
+  - droplr
+  # - firefox
+  - google-chrome
+  # - google-drive-file-stream
+  - google-earth-pro
+  - gpg-suite
+  - handbrake
+  - imazing
+  - iterm2
+  - jabra-direct
+  - kaleidoscope
   # - licecap
   # - macvim
   # - mysides
+  - parallels
   # - qlcolorcode
   # - qlimagesize
   # - qlmarkdown
@@ -79,38 +100,23 @@ homebrew_cask_apps:
   # - qlvideo
   # - quicklook-json
   # - quicklookase
-  # - sequel-pro
-  # - skitch
-  # - slack
-  # - suspicious-package
-  # - vagrant
-  - adguard
-  - adobe-creative-cloud
-  - aerial
-  - alfred
-  - calibre
-  - docker
-  - dropbox
-  - droplr
-  - firefox
-  - google-chrome
-  - google-drive-file-stream
-  - google-earth-pro
-  - gpg-suite
-  - handbrake
-  - imazing
-  - iterm2
-  - kaleidoscope
   - scrivener
+  # - sequel-pro
   - setapp
-  - shortcutdetective
+  # - shortcutdetective
+  # - skitch
   - skype
+  # - slack
+  - steam
   - sublime-merge
   - sublime-text
-  - superduper
+  # - superduper
+  # - suspicious-package
   - swiftdefaultappsprefpane
   - transmission
   # - transmit
+  # - vagrant
+  - zoomus
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_email: ""
