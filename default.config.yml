@@ -141,7 +141,6 @@ mas_installed_apps:
   - { name: "Shazam", id: 897118787 }
   - { name: "Spark", id: 1176895641 }
   - { name: "Spillo", id: 873245660 }
-  - { name: "Transmit", id: 1436522307 }
   - { name: "Twitterrific", id: 1289378661 }
   - { name: "Videux Play LT", id: 1204104924 }
   - { name: "Xcode", id: 497799835 }
