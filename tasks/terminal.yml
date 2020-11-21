@@ -1,10 +1,10 @@
 ---
 # Custom Terminal theme.
-# - name: Get current Terminal profile.
-#   shell: defaults read com.apple.terminal 'Default Window Settings'
-#   register: terminal_theme
-#   changed_when: false
-#   check_mode: no
+- name: Get current Terminal profile.
+  shell: defaults read com.apple.terminal 'Default Window Settings'
+  register: terminal_theme
+  changed_when: false
+  check_mode: false
 
 # - name: Ensure custom Terminal profile is added.
 #   shell: open files/terminal/JJG-Term.terminal
