@@ -5,6 +5,7 @@ ohmyzsh_install_dir: "~/.oh-my-zsh"
 sublime_userdir: "~/Library/Application Support/Sublime Text 3/Packages/User"
 sublime_packagedir: "~/Library/Application Support/Sublime Text 3/Installed Packages"
 dockutil_install_path: "/usr/local/bin/dockutil"
+launchagentdir: "~/Library/LaunchAgents/"
 macos_version: 10.15.2
 
 configure_dotfiles: true
@@ -63,16 +64,22 @@ homebrew_installed_packages:
   - github/gh/gh
   - go
   - gpg
+  - gpgme
+  - hopenpgp-tools
   - httpie
   - hub
-  - libevent
   - imagemagick
+  - libevent
   - mas
   - nmap
   - node
+  - pinentry-mac
+  - sleepwalker
   - vim
   - wget
   - yarn
+  - ykman
+  - yubikey-personalization
 
 homebrew_taps:
   - bramstein/webfonttools
@@ -131,6 +138,8 @@ homebrew_cask_apps:
   - transmission
   # - transmit
   # - vagrant
+  - yubico-authenticator
+  - yubico-yubikey-manager
   - zoomus
 
 # See `geerlingguy.mas` role documentation for usage instructions.

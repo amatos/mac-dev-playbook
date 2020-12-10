@@ -14,3 +14,49 @@
     regexp: '(for d in)( )(/var/cache/man)( )(\$manpath)(.*)'
     replace: '\1\2\3\4\5'
   when: copied_apropos
+
+- name: Copy gpg-agent plist into place
+  copy:
+    src: files/homebrew.gpg.gpg-agent.plist
+    dest: "{{ launchagentdir }}"
+    owner: "{{ lookup('env','USER') }}"
+    group: 'staff'
+    mode: '0644'
+  register: copied_gpgagent_plist
+
+- name: Copy sleepwatcher plist into place
+  copy:
+    src: files/homebrew.mxcl.sleepwatcher.plist
+    dest: "{{ launchagentdir }}"
+    owner: "{{ lookup('env','USER') }}"
+    group: 'staff'
+    mode: '0644'
+  register: copied_sleepwatcher_plist
+
+- name: Load and start gpg-agent
+  community.general.launchd:
+    name: homebrew.gpg.gpg-agent
+    state: restarted
+  when: copied_gpgagent_plist
+
+- name: Load and start gpg-agent
+  community.general.launchd:
+    name: homebrew.gpg.gpg-agent.plist
+    state: restarted
+  when: copied_sleepwatcher_plist
+
+- name: Copy sleepwatcher sleep file into place
+  copy:
+    src: files/.sleep
+    dest: "~/"
+    owner: "{{ lookup('env','USER') }}"
+    group: 'staff'
+    mode: '0755'
+
+- name: Copy sleepwatcher wakeup file into place
+  copy:
+    src: files/.wakeup
+    dest: "~/"
+    owner: "{{ lookup('env','USER') }}"
+    group: 'staff'
+    mode: '0755'
